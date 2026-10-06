@@ -79,3 +79,9 @@ variable "tenant_domain" {
   type        = string
   default     = "joshuakoshyschoolgmail.onmicrosoft.com"
 }
+
+variable "tenant_id" {
+  description = "Microsoft Entra tenant ID."
+  type        = string
+  default     = "f643e15c-efaa-4898-a069-1260e98f2964"
+}

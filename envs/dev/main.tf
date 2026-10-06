@@ -95,3 +95,16 @@ module "monitoring" {
 
   tags = local.tags
 }
+
+module "key_vault" {
+  source = "../../modules/key-vault"
+
+  resource_group_name    = azurerm_resource_group.main.name
+  location               = var.location
+  name_prefix            = local.name_prefix
+  tenant_id              = var.tenant_id
+  db_admin_password      = var.db_admin_password
+  current_user_object_id = "457e0d24-d875-4441-9507-826faf398f0d"
+
+  tags = local.tags
+}

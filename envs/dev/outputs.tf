@@ -68,3 +68,7 @@ output "iam_user_principal_names" {
 output "log_analytics_workspace_name" {
   value = module.monitoring.workspace_name
 }
+
+output "key_vault_name" {
+  value = module.key_vault.key_vault_name
+}
