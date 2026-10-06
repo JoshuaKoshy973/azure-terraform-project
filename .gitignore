@@ -1,0 +1,28 @@
+# Terraform working directory
+.terraform/
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+
+# Terraform plans and crash logs
+*.tfplan
+crash.log
+crash.*.log
+
+# Local variable files and secrets
+*.tfvars
+*.tfvars.json
+!.tfvars.example
+!.tfvars.json.example
+.env
+.env.*
+!.env.example
+
+# Local editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Terraform dependency lock files are intentionally tracked.

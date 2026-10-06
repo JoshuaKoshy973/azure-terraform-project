@@ -1,0 +1,9 @@
+location     = "eastus"
+environment  = "dev"
+project_name = "azure-terraform"
+
+common_tags = {
+  managed_by  = "terraform"
+  project     = "azure-terraform-project"
+  environment = "dev"
+}

@@ -1,0 +1,7 @@
+# Copy this file to backend.hcl after the bootstrap resources exist.
+# Do not commit the local backend.hcl file.
+
+resource_group_name  = "rg-terraform-state"
+storage_account_name = "replace-with-bootstrap-output"
+container_name       = "tfstate"
+key                  = "dev/terraform.tfstate"
