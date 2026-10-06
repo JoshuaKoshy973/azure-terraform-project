@@ -44,3 +44,11 @@ output "vmss_id" {
 output "vmss_name" {
   value = module.compute.vmss_name
 }
+
+output "storage_account_name" {
+  value = module.storage.storage_account_name
+}
+
+output "storage_container_names" {
+  value = module.storage.container_names
+}

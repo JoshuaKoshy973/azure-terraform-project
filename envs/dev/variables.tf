@@ -43,3 +43,14 @@ variable "db_subnet_prefix" {
   type        = string
   default     = "10.20.2.0/24"
 }
+
+variable "storage_container_names" {
+  description = "Blob containers required by the development environment."
+  type        = set(string)
+
+  default = [
+    "product-images",
+    "application-logs",
+    "backups"
+  ]
+}

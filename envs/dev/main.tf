@@ -51,3 +51,14 @@ module "compute" {
 
   tags = local.tags
 }
+
+module "storage" {
+  source = "../../modules/storage"
+
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+  name_prefix         = local.name_prefix
+  container_names     = var.storage_container_names
+
+  tags = local.tags
+}
