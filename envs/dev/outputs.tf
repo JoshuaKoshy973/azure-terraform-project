@@ -72,3 +72,7 @@ output "log_analytics_workspace_name" {
 output "key_vault_name" {
   value = module.key_vault.key_vault_name
 }
+
+output "vnet_name" {
+  value = module.network.vnet_name
+}
