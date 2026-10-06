@@ -1,11 +1,5 @@
 variable "location" {
-  description = "Azure region for the remote-state resources."
+  description = "Azure region for Terraform state resources."
   type        = string
-  default     = "eastus"
-}
-
-variable "resource_group_name" {
-  description = "Resource group name for remote Terraform state."
-  type        = string
-  default     = "rg-terraform-state"
+  default     = "southcentralus"
 }
