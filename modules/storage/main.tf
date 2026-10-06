@@ -5,7 +5,7 @@ resource "random_string" "suffix" {
 }
 
 resource "azurerm_storage_account" "main" {
-  name = "st${substr(replace(var.name_prefix, "-", ""), 0, 10)}${random_string.suffix.result}"
+  name                     = "st${substr(replace(var.name_prefix, "-", ""), 0, 10)}${random_string.suffix.result}"
   resource_group_name      = var.resource_group_name
   location                 = var.location
   account_tier             = "Standard"

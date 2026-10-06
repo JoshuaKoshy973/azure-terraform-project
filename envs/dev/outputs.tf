@@ -56,3 +56,11 @@ output "storage_container_names" {
 output "database_fqdn" {
   value = module.database.database_fqdn
 }
+
+output "iam_user_names" {
+  value = module.iam.user_names
+}
+
+output "iam_user_principal_names" {
+  value = module.iam.user_principal_names
+}

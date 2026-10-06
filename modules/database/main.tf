@@ -1,5 +1,5 @@
 resource "azurerm_private_dns_zone" "postgres" {
-  name = "dev.postgres.database.azure.com"
+  name                = "dev.postgres.database.azure.com"
   resource_group_name = var.resource_group_name
 
   tags = var.tags
@@ -15,10 +15,10 @@ resource "azurerm_private_dns_zone_virtual_network_link" "postgres" {
 }
 
 resource "azurerm_postgresql_flexible_server" "main" {
-  name                   = "psql-${var.name_prefix}"
-  resource_group_name    = var.resource_group_name
-  location               = var.location
-  version                = "16"
+  name                = "psql-${var.name_prefix}"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  version             = "16"
 
   administrator_login    = var.admin_username
   administrator_password = var.admin_password
@@ -35,6 +35,12 @@ resource "azurerm_postgresql_flexible_server" "main" {
   tags = var.tags
 
   public_network_access_enabled = false
+
+  lifecycle {
+    ignore_changes = [
+     zone
+    ]
+  }
 
   depends_on = [
     azurerm_private_dns_zone_virtual_network_link.postgres

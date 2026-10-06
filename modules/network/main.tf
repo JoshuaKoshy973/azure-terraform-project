@@ -20,6 +20,10 @@ resource "azurerm_subnet" "db" {
   virtual_network_name = azurerm_virtual_network.main.name
   address_prefixes     = [var.db_subnet_prefix]
 
+  service_endpoints = [
+  "Microsoft.Storage"
+  ]
+
   delegation {
     name = "postgresql-flexible-server"
 

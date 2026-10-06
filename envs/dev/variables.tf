@@ -60,3 +60,22 @@ variable "db_admin_password" {
   type        = string
   sensitive   = true
 }
+
+variable "iam_user_names" {
+  description = "Microsoft Entra users required by the project."
+  type        = list(string)
+
+  default = [
+    "Ibrahim",
+    "Ron",
+    "Sandip",
+    "Klaudio",
+    "Teyfik"
+  ]
+}
+
+variable "tenant_domain" {
+  description = "Microsoft Entra tenant domain."
+  type        = string
+  default     = "joshuakoshyschoolgmail.onmicrosoft.com"
+}

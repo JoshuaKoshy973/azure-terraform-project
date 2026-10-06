@@ -77,3 +77,11 @@ module "database" {
 
   tags = local.tags
 }
+
+module "iam" {
+  source = "../../modules/iam"
+
+  user_names    = var.iam_user_names
+  tenant_domain = var.tenant_domain
+  rbac_scope    = azurerm_resource_group.main.id
+}
