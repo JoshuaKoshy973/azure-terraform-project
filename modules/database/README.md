@@ -1,3 +1,3 @@
 # Database Module
 
-Starter folder for Azure Database for PostgreSQL with private networking.
+This module provisions Azure Database for PostgreSQL Flexible Server with delegated subnet access and private DNS.

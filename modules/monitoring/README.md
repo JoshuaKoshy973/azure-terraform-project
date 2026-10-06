@@ -1,3 +1,3 @@
 # Monitoring Module
 
-Starter folder for Log Analytics and Azure monitoring resources.
+This module provisions the Log Analytics workspace used by the development environment.

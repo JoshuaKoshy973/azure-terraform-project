@@ -1,3 +1,3 @@
 # Storage Module
 
-Starter folder for application storage containers such as product images, application logs, and backups.
+This module provisions the application storage account and private Blob containers for product images, application logs, and backups.

@@ -1,3 +1,3 @@
 # Load Balancer Module
 
-Starter folder for the Azure Load Balancer, public IP, backend pool, probe, and rule.
+This module provisions the public IP, Azure Load Balancer, backend pool, health probe, and HTTP forwarding rule.

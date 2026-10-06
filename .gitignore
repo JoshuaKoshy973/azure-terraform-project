@@ -11,6 +11,7 @@ crash.log
 crash.*.log
 
 # Local variable files and secrets
+backend.hcl
 *.tfvars
 *.tfvars.json
 !.tfvars.example

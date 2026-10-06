@@ -1,3 +1,3 @@
 # Network Module
 
-Starter folder for the Azure Resource Group, VNet, application subnet, database subnet, and NSGs.
+This module provisions the VNet, application and database subnets, subnet associations, and network security groups.
