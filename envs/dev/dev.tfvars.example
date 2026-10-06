@@ -1,4 +1,4 @@
-location     = "eastus"
+location = "southcentralus"
 environment  = "dev"
 project_name = "azure-terraform"
 
