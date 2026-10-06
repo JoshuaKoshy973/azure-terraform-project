@@ -8,7 +8,7 @@ terraform {
     }
   }
 
-  # backend "azurerm" {} will be enabled after bootstrap is implemented.
+  backend "azurerm" {}
 }
 
 provider "azurerm" {
