@@ -32,3 +32,15 @@ output "db_nsg_id" {
   description = "ID of the database NSG."
   value       = module.network.db_nsg_id
 }
+
+output "load_balancer_public_ip" {
+  value = module.load_balancer.public_ip_address
+}
+
+output "vmss_id" {
+  value = module.compute.vmss_id
+}
+
+output "vmss_name" {
+  value = module.compute.vmss_name
+}

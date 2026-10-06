@@ -29,3 +29,25 @@ module "network" {
 
   tags = local.tags
 }
+
+module "load_balancer" {
+  source = "../../modules/load-balancer"
+
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+  name_prefix         = local.name_prefix
+  tags                = local.tags
+}
+
+module "compute" {
+  source = "../../modules/compute"
+
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+  name_prefix         = local.name_prefix
+
+  subnet_id       = module.network.app_subnet_id
+  backend_pool_id = module.load_balancer.backend_pool_id
+
+  tags = local.tags
+}
