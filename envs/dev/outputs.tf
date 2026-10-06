@@ -64,3 +64,7 @@ output "iam_user_names" {
 output "iam_user_principal_names" {
   value = module.iam.user_principal_names
 }
+
+output "log_analytics_workspace_name" {
+  value = module.monitoring.workspace_name
+}
