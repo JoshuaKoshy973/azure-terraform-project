@@ -52,3 +52,7 @@ output "storage_account_name" {
 output "storage_container_names" {
   value = module.storage.container_names
 }
+
+output "database_fqdn" {
+  value = module.database.database_fqdn
+}

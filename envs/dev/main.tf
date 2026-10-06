@@ -62,3 +62,18 @@ module "storage" {
 
   tags = local.tags
 }
+
+module "database" {
+  source = "../../modules/database"
+
+  resource_group_name = azurerm_resource_group.main.name
+  location            = var.location
+  name_prefix         = local.name_prefix
+
+  db_subnet_id = module.network.db_subnet_id
+  vnet_id      = module.network.vnet_id
+
+  admin_password = var.db_admin_password
+
+  tags = local.tags
+}

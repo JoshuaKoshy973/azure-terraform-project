@@ -1,1 +1,33 @@
-# Database module inputs will be added with the implementation.
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "name_prefix" {
+  type = string
+}
+
+variable "db_subnet_id" {
+  type = string
+}
+
+variable "vnet_id" {
+  type = string
+}
+
+variable "admin_username" {
+  type    = string
+  default = "pgadmin"
+}
+
+variable "admin_password" {
+  type      = string
+  sensitive = true
+}
+
+variable "tags" {
+  type = map(string)
+}

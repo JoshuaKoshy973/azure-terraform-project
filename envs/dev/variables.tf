@@ -54,3 +54,9 @@ variable "storage_container_names" {
     "backups"
   ]
 }
+
+variable "db_admin_password" {
+  description = "Administrator password for PostgreSQL."
+  type        = string
+  sensitive   = true
+}
