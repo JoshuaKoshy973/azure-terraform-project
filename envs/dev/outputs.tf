@@ -7,3 +7,28 @@ output "resource_group_id" {
   description = "Resource ID of the development resource group."
   value       = azurerm_resource_group.main.id
 }
+
+output "vnet_id" {
+  description = "ID of the development virtual network."
+  value       = module.network.vnet_id
+}
+
+output "app_subnet_id" {
+  description = "ID of the application subnet."
+  value       = module.network.app_subnet_id
+}
+
+output "db_subnet_id" {
+  description = "ID of the database subnet."
+  value       = module.network.db_subnet_id
+}
+
+output "app_nsg_id" {
+  description = "ID of the application NSG."
+  value       = module.network.app_nsg_id
+}
+
+output "db_nsg_id" {
+  description = "ID of the database NSG."
+  value       = module.network.db_nsg_id
+}

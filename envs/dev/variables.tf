@@ -25,3 +25,21 @@ variable "common_tags" {
     environment = "dev"
   }
 }
+
+variable "vnet_address_space" {
+  description = "Address space for the development VNet."
+  type        = list(string)
+  default     = ["10.20.0.0/16"]
+}
+
+variable "app_subnet_prefix" {
+  description = "CIDR prefix for the application subnet."
+  type        = string
+  default     = "10.20.1.0/24"
+}
+
+variable "db_subnet_prefix" {
+  description = "CIDR prefix for the database subnet."
+  type        = string
+  default     = "10.20.2.0/24"
+}
